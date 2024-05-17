@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>CS 4600 Final Project</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link type="text/css" rel="stylesheet" href="css/bulma.css">
+    <script src="https://d3js.org/d3.v5.min.js"></script>
+    <script type="module" src="js/script.js"></script>
+</head>
+
+<body>
+    <section class="section">
+        <h1 class="title is-1 has-text-centered">CS 4600 Final Project</h1>
+        <h3 class="subtitle has-text-centered">The Utah Teapot</h3>
+    </section>
+    <div class="tabs">
+        <ul>
+            <li id="teapot_tab" class="is-active"><a>The Utah Teapot</a></li>
+            <li id="video_tab"><a>Screen Capture</a></li>
+            <li id="ref_tab"><a>Project References</a></li>
+            <li><a href="https://github.com/JoshuaMorrell/TheUtahTeapot">GitHub</a></li>
+        </ul>
+    </div>
+    <section class="section page" id="teapot">
+        <div class="columns">
+            <div class="column">
+                <div class="container-fluid has-text-centered" id="canvas"></div>
+            </div>
+        </div>
+        <div class="columns">
+            <div class="column column is-offset-one-fifth">
+                <a id="explore" class="button is-outlined">Explore</a>
+            </div>
+        </div>
+        <div style="display: none;" id="explanation" class="columns">
+            <hr style="width: 75%; margin: auto;">
+            <div class="column is-offset-one-fifth">
+                <div style="margin-bottom: 15px;" class="container-fluid">
+                    <h3 class="subtitle">Wondering how to explore our project?</h3>
+                </div>
+                <div class="container-fluid">
+                    <h6>1. Feel free to click and drag across the canvas to view every angle of the teapot.</h6>
+                    <h6>2. Pitch to zoom (or scroll mousewheel) for a closer look at the reflective surface.</h6>
+                    <h6>3. Use your arrow keys to translate the teapot across the Catmull Gallery scene.</h6>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section style="display: none;" class="section page" id="video">
+        <div class="container-fluid has-text-centered">
+            <iframe style="border: 1px solid black;" width="560" height="315" src="https://www.youtube.com/embed/9k8rJNSSIcI" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+    </section>
+    <section style="display: none;" class="section page" id="reference">
+        <div class="container-fluid has-text-centered">
+            <iframe style="border: 1px solid black;" width="80%" height="800px;" src="Final Project.pdf"></iframe>
+        </div>
+    </section>
+    <section class="section page"></section>
+</body>
+
+</html>
