@@ -1,8 +1,5 @@
 /**
- * @author Joshua Morrell / https://github.com/JoshuaMorrell
- * @author Tyrus Draper
- * @author Ryan Daly
- * @author Britton Gaul
+ * @author Recchi Giovanni / https://github.com/1849695
  **/
 
  // three.js imports
@@ -100,7 +97,7 @@ render();
 // add camera controls with some constraints
 let cameraControls = new OrbitControls(camera, renderer.domElement);
 cameraControls.minDistance = 1000;
-cameraControls.maxDistance = 7000;
+cameraControls.maxDistance = 6000;
 cameraControls.addEventListener('change', () => renderer.render(scene, camera));
 
 // update canvas size when window is resized
@@ -145,7 +142,7 @@ function makeLabel() {
 
     const labelCanvas = document.createElement('canvas').getContext('2d');
     labelCanvas.font = '200px bold sans-serif';
-    const textWidth = labelCanvas.measureText('The Utah Teapot').width;
+    const textWidth = labelCanvas.measureText('Teapot').width;
 
     labelCanvas.canvas.width = width;
     labelCanvas.canvas.height = height;
