@@ -142,7 +142,7 @@ function makeLabel() {
 
     const labelCanvas = document.createElement('canvas').getContext('2d');
     labelCanvas.font = '200px bold sans-serif';
-    const textWidth = labelCanvas.measureText('Teapot').width;
+    const textWidth = labelCanvas.measureText('The Utah Teapot').width;
 
     labelCanvas.canvas.width = width;
     labelCanvas.canvas.height = height;
