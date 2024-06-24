@@ -100,7 +100,7 @@ render();
 // add camera controls with some constraints
 let cameraControls = new OrbitControls(camera, renderer.domElement);
 cameraControls.minDistance = 1000;
-cameraControls.maxDistance = 5000;
+cameraControls.maxDistance = 7000;
 cameraControls.addEventListener('change', () => renderer.render(scene, camera));
 
 // update canvas size when window is resized
@@ -132,20 +132,20 @@ function render() {
     requestAnimationFrame( render );
     if(isExploring === false){
         rotation += 0.001;
-        camera.position.x = Math.sin(rotation) * 3000;
-        camera.position.z = Math.cos(rotation) * 3000;
+        camera.position.x = Math.sin(rotation) * 2000;
+        camera.position.z = Math.cos(rotation) * 2000;
         camera.lookAt( scene.position );
     }
     renderer.render( scene, camera );
 }
 
 function makeLabel() {
-    const width = 1240;
-    const height = 240;
+    const width = 1140;
+    const height = 140;
 
     const labelCanvas = document.createElement('canvas').getContext('2d');
     labelCanvas.font = '200px bold sans-serif';
-    const textWidth = labelCanvas.measureText('The Utah Teapot').width;
+    const textWidth = labelCanvas.measureText('Teapot').width;
 
     labelCanvas.canvas.width = width;
     labelCanvas.canvas.height = height;
