@@ -134,7 +134,7 @@ function makeLabel() {
     labelCanv.canvas.height = height;
 
     labelCanv.font = '200px bold sans-serif';
-    const textWidth = labelCanv.measureText('The Utah Teapot').width;
+    const textWidth = labelCanv.measureText('Utah Teapot').width;
 
     labelCanv.textBaseline = 'middle';
     labelCanv.textAlign = 'center';
