@@ -130,25 +130,22 @@ function makeLabel() {
     const height = 240;
 
     const labelCanv = document.createElement('canvas').getContext('2d');
-    labelCanv.font = '200px bold sans-serif';
-    const textWidth = labelCanv.measureText('Teapot').width;
-
     labelCanv.canvas.width = width;
     labelCanv.canvas.height = height;
 
     labelCanv.font = '200px bold sans-serif';
+    const textWidth = labelCanv.measureText('The Utah Teapot').width;
+
     labelCanv.textBaseline = 'middle';
     labelCanv.textAlign = 'center';
     labelCanv.fillStyle = 'rgba(0, 0, 0, 0.25)';
 
     labelCanv.fillRect(0, 0, width, height);
-    labelCanv.translate(width / 2, height / 2);
-    labelCanv.scale(1200 / textWidth, 1);
     labelCanv.fillStyle = 'black';
-    labelCanv.fillText('The Utah Teapot', 0, 0);
+    labelCanv.fillText('The Utah Teapot', width / 2, height / 2);
 
     return labelCanv.canvas;
-  }
+}
 
   // an animation loop for the teapot scene
 function render() {
