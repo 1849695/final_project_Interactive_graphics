@@ -114,12 +114,12 @@ window.addEventListener('resize', () => {
 document.getElementById('explore').addEventListener('click', () => {
     if(isExploring === false){
         isExploring = true;
-        document.getElementById('explore').innerHTML = 'Rotate';
+        document.getElementById('explore').innerHTML = 'Rotation';
         document.getElementById('explanation').style.display = 'block';
     }
     else{
         isExploring = false;
-        document.getElementById('explore').innerHTML = 'Explore';
+        document.getElementById('explore').innerHTML = 'Exploration';
         document.getElementById('explanation').style.display = 'none';
     }
 }, false);
