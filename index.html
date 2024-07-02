@@ -13,43 +13,13 @@
         #explore {
             color: black !important;
         }
-        .dropdown {
-            position: fixed; 
-            left: 0;
-            top: 0;
-            width: 250px;
-            height: 100%;
-            border-right: 1px solid #ddd; 
-            background-color: black; 
-            display: none; 
-        }
-        .dropdown-content {
-            display: flex;
-            flex-direction: column; 
-        }
-        .dropdown-content a {
-            padding: 10px 15px; 
-            text-decoration: none;
-            color: white; 
-            display: block; 
-        }
-        .dropdown-content a:hover {
-            background-color: #333; 
-        }
-        .dropdown-btn {
-            position: fixed; 
-            left: 0;
-            top: 0;
-            width: 50px; 
-            height: 50px; 
-            background-color: #000000;
-            color: white; 
-            font-size: 30px; 
-            border: none; 
-            cursor: pointer; 
-        }
         .tabs ul {
-            display: none; 
+            display: flex;
+            justify-content: space-between;
+        }
+        .tabs ul li {
+            flex: 1;
+            text-align: center;
         }
     </style>
     <title>Interactive Graphics Final Project</title>
@@ -58,32 +28,20 @@
     <link type="text/css" rel="stylesheet" href="css/bulma.css">
     <script src="https://d3js.org/d3.v5.min.js"></script>
     <script type="module" src="js/script.js"></script>
-    <script>
-        // Function to show/hide the drop-down menu
-        function toggleDropdown() {
-            var dropdown = document.getElementById("dropdown");
-            if (dropdown.style.display === "none") {
-                dropdown.style.display = "block";
-            } else {
-                dropdown.style.display = "none";
-            }
-        }
-    </script>
 </head>
 
 <body>
-    <button onclick="toggleDropdown()" class="dropdown-btn">&#9776;</button> <!-- Bottone per il menu a tendina -->
-    <div id="dropdown" class="dropdown">
-        <div class="dropdown-content">
-            <a href="#teapot">The Utah Teapot</a>
-            <a href="#reference">Project References</a>
-           <a href="https://github.com/1849695/final_project_Interactive_graphics">GitHub</a>
-        </div>
-    </div>
     <section class="section">
         <h1 class="title is-1 has-text-centered">Interactive Graphics Final Project</h1>
         <h3 class="subtitle has-text-centered">The Utah Teapot</h3>
     </section>
+    <div class="tabs">
+        <ul>
+            <li id="teapot_tab" class="is-active"><a>The Utah Teapot</a></li>
+            <li id="ref_tab"><a>Project References</a></li>
+            <li><a href="https://github.com/1849695/final_project_Interactive_graphics">GitHub</a></li>
+        </ul>
+    </div>
     <section class="section page" id="teapot">
         <div class="columns">
             <div class="column">
