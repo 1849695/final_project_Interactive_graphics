@@ -30,7 +30,7 @@ let rotation = 1;
 let isExploring = false;
 
 // canvas is 75% of full screen
-const scaleWindow = 0.80; 
+const scaleWindow = 0.75; 
 
 // images for the scene background
 const sceneIm = [
