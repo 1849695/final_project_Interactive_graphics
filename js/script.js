@@ -133,8 +133,8 @@ function makeLabel() {
     labelCanv.canvas.width = width;
     labelCanv.canvas.height = height;
 
-    labelCanv.font = '180px bold sans-serif';
-    const textWidth = labelCanv.measureText('The Utah Teapot').width;
+    labelCanv.font = '200px bold sans-serif';
+    const textWidth = labelCanv.measureText('Utah Teapot').width;
 
     labelCanv.textBaseline = 'middle';
     labelCanv.textAlign = 'center';
@@ -142,7 +142,7 @@ function makeLabel() {
 
     labelCanv.fillRect(0, 0, width, height);
     labelCanv.fillStyle = 'black';
-    labelCanv.fillText('The Utah Teapot', width / 2, height / 2);
+    labelCanv.fillText('Utah Teapot', width / 2, height / 2);
 
     return labelCanv.canvas;
 }
